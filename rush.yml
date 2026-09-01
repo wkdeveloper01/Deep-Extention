@@ -6,5 +6,5 @@ version:
   number: 1
   name: "1.0"
 
-assets: []
-deps: []
+assets: {}
+deps: {}
