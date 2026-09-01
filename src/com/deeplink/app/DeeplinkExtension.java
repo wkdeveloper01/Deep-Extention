@@ -7,10 +7,9 @@ import com.google.appinventor.components.runtime.ComponentContainer;
 
 @DesignerComponent(
     version = 1,
-    description = "Deeplink Extension Generated Automatically",
+    description = "Deeplink Extension",
     category = ComponentCategory.EXTENSION,
-    nonVisible = true,
-    iconName = ""
+    nonVisible = true
 )
 @SimpleObject(external = true)
 public class DeeplinkExtension extends AndroidNonvisibleComponent {
