@@ -7,4 +7,6 @@ version:
   name: "1.0"
 
 assets:
-  - ""
+  dir: assets
+
+deps: []
