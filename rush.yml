@@ -1,16 +1,5 @@
 name: DeeplinkExtension
 description: Deeplink Extension for App Inventor
-author: wkdeveloper01
+authors:
+  - wkdeveloper01
 version: '1.0'
-icon: ''
-license: ''
-
-assets:
-  - ''
-
-deps: []
-
-build:
-  release:
-    optimize: true
-    shrink: false
