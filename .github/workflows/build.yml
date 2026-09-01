@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
       - name: Set up Java JDK 8
         uses: actions/setup-java@v4
         with:
@@ -24,12 +21,15 @@ jobs:
           curl -fsSL https://raw.githubusercontent.com/shreyashsaitwal/rush-cli/main/scripts/install/install.sh | bash
           echo "$HOME/.rush/bin" >> $GITHUB_PATH
 
-      - name: Build Extension
+      - name: Initialize and Build Extension
         run: |
+          mkdir -p my_extension && cd my_extension
+          $HOME/.rush/bin/rush create DeeplinkExtension --org com.deeplink.app --no-input
+          cd DeeplinkExtension
           $HOME/.rush/bin/rush build
 
       - name: Upload AIX Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Extension-AIX
-          path: out/*.aix
+          path: my_extension/DeeplinkExtension/out/*.aix
